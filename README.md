@@ -78,19 +78,15 @@ exec bash
 
 ## 🗑️ Uninstall
 
+To remove the CoreX theme and restore the default Termux configuration:
+
 ```bash
 cd CoreX
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
 
-Or manually restore the original configuration:
-
-```bash
-cp $PREFIX/etc/bash.bashrc.bak $PREFIX/etc/bash.bashrc
-rm -f $PREFIX/etc/wlc.py
-exec bash
-```
+After the process completes, the default Termux configuration will be restored automatically.
 
 ---
 
