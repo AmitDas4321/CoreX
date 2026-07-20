@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="preview.png" alt="CoreX Preview" width="800">
+</p>
+
 <h1 align="center">
   <img src="https://img.shields.io/badge/CoreX-Termux%20Theme-6C63FF?style=for-the-badge&logo=gnu-bash">
   <br>
@@ -6,31 +10,36 @@
 </h1>
 
 <p align="center">
-  <strong>A Modern, Clean & Cyberpunk Termux Theme</strong>
+  <strong>A Modern, Clean & Cyberpunk Terminal Theme for Termux & Linux</strong>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/AmitDas4321/CoreX?style=flat-square">
   <img src="https://img.shields.io/github/forks/AmitDas4321/CoreX?style=flat-square">
   <img src="https://img.shields.io/github/license/AmitDas4321/CoreX?style=flat-square">
-  <img src="https://img.shields.io/badge/Platform-Termux-blue?style=flat-square">
+  <img src="https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-blue?style=flat-square">
 </p>
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🎨 Modern cyberpunk terminal banner
-- 🌈 Colorful `figlet` + `lolcat` logo
-- 🐍 Python welcome animation
-- ⌚ Beautiful prompt with Time, Date & Current Directory
-- ⚡ Fast and lightweight
-- 🔧 Easy installation
-- 📱 Designed for Termux
+* 🎨 Modern cyberpunk terminal banner
+* 🌈 Colorful `figlet` + `lolcat` logo
+* 🐍 Python welcome animation
+* ⌚ Beautiful prompt with Time, Date & Current Directory
+* ⚡ Fast and lightweight
+* 🔧 Easy installation
+* ♻️ One-click uninstall
+* 💾 Automatic backup & restore
+* 📱 Designed for Termux
+* 🐧 Supports Linux (Ubuntu, Debian, Kali, Arch & Fedora)
 
 ---
 
-## 📦 Installation
+# 📦 Installation
+
+## 📱 Termux
 
 ### 1. Update Termux
 
@@ -68,7 +77,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### 6. Restart Termux (Optional)
+### 6. Restart Shell (Optional)
 
 ```bash
 exec bash
@@ -76,24 +85,130 @@ exec bash
 
 ---
 
-## 🗑️ Uninstall
+## 🐧 Linux Installation
 
-To remove the CoreX theme and restore the default Termux configuration:
+### Ubuntu / Debian / Kali
+
+Install required packages:
+
+```bash
+sudo apt update
+
+sudo apt install -y \
+git bash python3 figlet lolcat
+```
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AmitDas4321/CoreX.git
+```
+
+Open the project:
 
 ```bash
 cd CoreX
-chmod +x uninstall.sh
-./uninstall.sh
 ```
 
-After the process completes, the default Termux configuration will be restored automatically.
+Run the installer:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
 
 ---
 
-## 📁 Project Structure
+### Arch Linux
 
+Install required packages:
+
+```bash
+sudo pacman -S git bash python figlet lolcat
 ```
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AmitDas4321/CoreX.git
+```
+
+Open the project:
+
+```bash
+cd CoreX
+```
+
+Run the installer:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+---
+
+### Fedora
+
+Install required packages:
+
+```bash
+sudo dnf install git bash python3 figlet lolcat
+```
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AmitDas4321/CoreX.git
+```
+
+Open the project:
+
+```bash
+cd CoreX
+```
+
+Run the installer:
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+---
+
+# 🗑️ Uninstall
+
+## Termux
+
+```bash
+cd CoreX
+
+chmod +x uninstall.sh
+
+./uninstall.sh
+```
+
+---
+
+## Linux
+
+```bash
+cd CoreX
+
+chmod +x uninstall.sh
+
+./uninstall.sh
+```
+
+---
+
+# 📁 Project Structure
+
+```text
 CoreX/
+├── install.sh
+├── uninstall.sh
 ├── bash.bashrc
 ├── wlc.py
 ├── LICENSE
@@ -102,32 +217,61 @@ CoreX/
 
 ---
 
-## 🎯 Requirements
+# 🌍 Supported Platforms
 
-- Latest Termux
-- Python
-- Bash
-- Figlet
-- Lolcat
-- Internet Connection
+* ✅ Termux
+* ✅ Ubuntu
+* ✅ Debian
+* ✅ Kali Linux
+* ✅ Arch Linux
+* ✅ Fedora
 
 ---
 
-## 👨‍💻 Author
+# 🎯 Requirements
+
+### Termux
+
+* Latest Termux
+* Python
+* Bash
+* Figlet
+* Lolcat
+* Internet Connection
+
+### Linux
+
+* Bash
+* Python 3
+* Figlet
+* Lolcat
+* Git
+* Internet Connection
+
+---
+
+# 👨‍💻 Author
 
 **Amit Das**
 
 GitHub:
+
 https://github.com/AmitDas4321
 
 ---
 
-## ⭐ Support
+# ⭐ Support
 
-If you like this project, don't forget to give it a ⭐ on GitHub.
+If you like this project, don't forget to leave a ⭐ on GitHub.
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
+
+<p align="center">
+Made with ❤️ by <strong>Amit Das</strong>
+</p>

@@ -7,14 +7,19 @@ echo -e "\e[1;33m         Welcome to the CoreX Installer\e[0m"
 echo -e "\e[1;36m╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯\e[0m"
 echo
 
-# Confirm Installation
+if [ -d "/data/data/com.termux" ]; then
+    INSTALL_DIR="$PREFIX/etc"
+    USE_SUDO=""
+else
+    INSTALL_DIR="/etc"
+    USE_SUDO="sudo"
+fi
+
 while true; do
     read -p "Do you want to install CoreX Theme? (Y/N): " CHOICE
 
     case "$CHOICE" in
-        [Yy])
-            break
-            ;;
+        [Yy]) break ;;
         [Nn])
             echo
             echo "Installation cancelled."
@@ -32,23 +37,22 @@ read -p "Enter your name: " USERNAME
 echo
 echo "[1/4] Installing theme..."
 
-# Backup current bashrc
-if [ ! -f "$PREFIX/etc/bash.bashrc.bak" ]; then
-    cp "$PREFIX/etc/bash.bashrc" "$PREFIX/etc/bash.bashrc.bak"
+if [ ! -f "$INSTALL_DIR/bash.bashrc.bak" ]; then
+    $USE_SUDO cp "$INSTALL_DIR/bash.bashrc" "$INSTALL_DIR/bash.bashrc.bak" 2>/dev/null
 fi
 
-cp bash.bashrc "$PREFIX/etc/bash.bashrc"
-cp wlc.py "$PREFIX/etc/wlc.py"
+$USE_SUDO cp bash.bashrc "$INSTALL_DIR/bash.bashrc"
+$USE_SUDO cp wlc.py "$INSTALL_DIR/wlc.py"
 
 echo "[2/4] Personalizing..."
 
-sed -i "s/__USERNAME__/$USERNAME/g" "$PREFIX/etc/bash.bashrc"
-sed -i "s/__USERNAME__/$USERNAME/g" "$PREFIX/etc/wlc.py"
+$USE_SUDO sed -i "s/__USERNAME__/$USERNAME/g" "$INSTALL_DIR/bash.bashrc"
+$USE_SUDO sed -i "s/__USERNAME__/$USERNAME/g" "$INSTALL_DIR/wlc.py"
 
 echo "[3/4] Applying configuration..."
 
-chmod 600 "$PREFIX/etc/bash.bashrc"
-chmod 600 "$PREFIX/etc/wlc.py"
+$USE_SUDO chmod 644 "$INSTALL_DIR/bash.bashrc"
+$USE_SUDO chmod 755 "$INSTALL_DIR/wlc.py"
 
 echo "[4/4] Finishing..."
 
