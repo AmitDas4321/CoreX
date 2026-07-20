@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="preview.png" alt="CoreX Preview" width="800">
+  <img src="./banner.png" alt="CoreX Preview" width="800">
 </p>
 
 <h1 align="center">
