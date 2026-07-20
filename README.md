@@ -239,11 +239,22 @@ CoreX/
 
 # 👨‍💻 Author
 
-**Amit Das**
+<p align="center">
+  <a href="https://github.com/AmitDas4321">
+    <img src="https://github.com/AmitDas4321.png" width="140" height="140" style="border-radius:50%;" alt="Amit Das"/>
+  </a>
+</p>
 
-GitHub:
+<p align="center">
+  <strong>Amit Das</strong><br>
+  Full Stack Developer
+</p>
 
-https://github.com/AmitDas4321
+<p align="center">
+  <a href="https://github.com/AmitDas4321">
+    <img src="https://img.shields.io/badge/GitHub-AmitDas4321-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+  </a>
+</p>
 
 ---
 
@@ -260,5 +271,6 @@ This project is licensed under the **MIT License**.
 ---
 
 <p align="center">
-Made with ❤️ by <strong>Amit Das</strong>
+  <b>Made with ❤️ by <a href="https://amitdas.site">Amit Das</a></b><br>
+  ☕ Support development: <a href="https://buymeacoffee.com/amitdas4321">Buy Me a Coffee</a>
 </p>
