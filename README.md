@@ -76,6 +76,24 @@ exec bash
 
 ---
 
+## 🗑️ Uninstall
+
+```bash
+cd CoreX
+chmod +x uninstall.sh
+./uninstall.sh
+```
+
+Or manually restore the original configuration:
+
+```bash
+cp $PREFIX/etc/bash.bashrc.bak $PREFIX/etc/bash.bashrc
+rm -f $PREFIX/etc/wlc.py
+exec bash
+```
+
+---
+
 ## 📁 Project Structure
 
 ```
