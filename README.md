@@ -198,6 +198,7 @@ CoreX/
 ├── bash.bashrc
 ├── wlc.py
 ├── LICENSE
+├── banner.png
 └── README.md
 ```
 
