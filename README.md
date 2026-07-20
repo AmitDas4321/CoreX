@@ -41,9 +41,9 @@ pkg update -y && pkg upgrade -y
 ### 2. Install Dependencies
 
 ```bash
-pkg install -y git python python2 python3 bash \
-figlet ruby curl nano clang fish php perl nmap \
-w3m hydra cowsay tar host help
+pkg install -y git bash python python2 python3 \
+figlet ruby curl nano clang fish php perl \
+nmap w3m hydra cowsay tar host help
 
 pip install requests mechanize lolcat bs4 futures rich
 pip2 install requests mechanize bs4 futures
@@ -61,14 +61,14 @@ git clone https://github.com/AmitDas4321/CoreX.git
 cd CoreX
 ```
 
-### 5. Install Theme
+### 5. Run Installer
 
 ```bash
-cp bash.bashrc $PREFIX/etc/bash.bashrc
-cp wlc.py $PREFIX/etc/wlc.py
+chmod +x install.sh
+./install.sh
 ```
 
-### 6. Restart Termux
+### 6. Restart Termux (Optional)
 
 ```bash
 exec bash
