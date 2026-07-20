@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-  <img src="https://img.shields.io/badge/CoreX-Termux%20Theme-6C63FF?style=for-the-badge&logo=gnu-bash">
+  <img src="https://img.shields.io/badge/CoreX-Terminal%20Theme-6C63FF?style=for-the-badge&logo=gnu-bash">
   <br>
   CoreX
   <br>
