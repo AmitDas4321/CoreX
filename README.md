@@ -179,20 +179,6 @@ chmod +x install.sh
 
 # 🗑️ Uninstall
 
-## Termux
-
-```bash
-cd CoreX
-
-chmod +x uninstall.sh
-
-./uninstall.sh
-```
-
----
-
-## Linux
-
 ```bash
 cd CoreX
 
