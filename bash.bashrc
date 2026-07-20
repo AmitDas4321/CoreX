@@ -1,30 +1,64 @@
 clear
 
+if [ -d "/data/data/com.termux" ]; then
+    COREX_WLC="$PREFIX/etc/wlc.py"
+    TERMUX=true
+else
+    COREX_WLC="$HOME/.corex/wlc.py"
+    TERMUX=false
+fi
+
+
 echo -e "\e[1;36m╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮\e[0m"
-echo -e "\e[1;36m┃  \e[1;32m[★] \e[1;35mT E R M U X   S E C U R E   T E R M I N A L \e[1;32m[★]\e[1;36m  ┃\e[0m"
+echo -e "\e[1;36m┃  \e[1;32m[★] \e[1;35mC O R E X   S E C U R E   T E R M I N A L \e[1;32m[★]\e[1;36m  ┃\e[0m"
 echo -e "\e[1;36m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\e[0m"
 echo -e "\e[1;33m            We Are Anonymous. We Are Legion.\e[0m"
 echo
 
-figlet -f standard "__USERNAME__" | lolcat
+
+if command -v figlet >/dev/null 2>&1 && command -v lolcat >/dev/null 2>&1; then
+    figlet -f standard "__USERNAME__" | lolcat
+else
+    echo "__USERNAME__"
+fi
+
 
 echo -e "\e[1;36m┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫\e[0m"
 echo -e "\e[1;37m              We Do Not HaCk To Impress,\e[0m"
 echo -e "\e[1;31m                 We HaCk To Express.\e[0m"
 echo -e "\e[1;36m╰━━━━━━━━━━━━━━ \e[1;34m[★] \e[1;32mIND H@ckers \e[1;34m[★] \e[1;36m━━━━━━━━━━━━━━╯\e[0m"
 
-python "$PREFIX/etc/wlc.py"
 
-if [ -x "$PREFIX/libexec/termux/command-not-found" ]; then
-    command_not_found_handle() {
-        "$PREFIX/libexec/termux/command-not-found" "$1"
-    }
+if [ -f "$COREX_WLC" ]; then
+    python3 "$COREX_WLC"
 fi
+
+
+
+if [ "$TERMUX" = true ]; then
+
+    if [ -x "$PREFIX/libexec/termux/command-not-found" ]; then
+        command_not_found_handle() {
+            "$PREFIX/libexec/termux/command-not-found" "$1"
+        }
+    fi
+
+else
+
+    if [ -x "/usr/lib/command-not-found" ]; then
+        command_not_found_handle() {
+            /usr/lib/command-not-found "$1"
+        }
+    fi
+
+fi
+
+
 
 PS1='\[\e[1;36m\]╭─\[\e[1;34m\][\[\e[1;33m\]\T\[\e[1;34m\]]\[\e[1;36m\]──\[\e[1;34m\][\[\e[1;35m\]\d\[\e[1;34m\]]\[\e[1;36m\]
 │
 ╰─\[\e[1;34m\][\[\e[1;31m\]★ __USERNAME__\[\e[1;34m\]]\[\e[1;37m\]─\[\e[1;34m\][\[\e[1;32m\]\w\[\e[1;34m\]]\[\e[1;37m\]
  \[\e[1;36m\]╰─►\[\e[1;32m\] '
 
-# Cursor shape (Vertical Bar)
+
 echo -e '\e[6 q'
