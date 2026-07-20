@@ -18,80 +18,109 @@
 
 ---
 
-## ✨ About CoreX
+# ✨ About CoreX
 
-**CoreX** is a modern cyberpunk-style terminal customization tool designed to transform your default terminal into a beautiful, personalized workspace.
+**CoreX** is a modern cyberpunk terminal customization tool that transforms your default terminal into a beautiful and personalized workspace.
 
-It supports:
+CoreX automatically detects your environment and configures your terminal.
 
-- 📱 Android Termux
-- 🐧 Linux distributions
+### Supported Platforms
+
+- 📱 Termux Android
+- 🐧 Linux
 - 🖥️ WSL Linux
-
-CoreX automatically detects your environment and applies the correct configuration.
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 - 🎨 Modern cyberpunk terminal banner
 - 🌈 Colorful `figlet` + `lolcat` username display
 - 🐍 Python welcome animation
-- ⌚ Custom terminal prompt with:
-  - Current Time
+- ⌚ Beautiful terminal prompt with:
+  - Time
   - Date
   - Username
-  - Working Directory
-- 🖥️ Cross-platform support
-- ⚡ Lightweight and fast
-- 🔧 Automatic backup & restore
-- 🛡️ Safe uninstall option
-- 🚀 Easy installation
+  - Current directory
+- 🔧 Automatic backup system
+- ♻️ Restore original configuration
+- ⚡ Fast and lightweight
+- 🌍 Cross-platform support
+- 🚀 Simple installation
 
 ---
 
 # 📦 Installation
 
-## 📱 Termux Installation
-
-### 1. Update Packages
+## 1. Update Termux
 
 ```bash
 pkg update -y && pkg upgrade -y
-```
+````
 
-### 2. Install Dependencies
+---
 
-```bash
-pkg install -y git bash python figlet ruby
-```
-
-Install lolcat:
+## 2. Install Dependencies
 
 ```bash
-gem install lolcat
+pkg install -y git bash python python2 python3 \
+figlet ruby curl nano clang fish php perl \
+nmap w3m hydra cowsay tar host help
 ```
 
-### 3. Clone Repository
+Install Python packages:
+
+```bash
+pip install requests mechanize lolcat bs4 futures rich
+```
+
+Install Python 2 packages:
+
+```bash
+pip2 install requests mechanize bs4 futures
+```
+
+---
+
+## 3. Clone Repository
 
 ```bash
 git clone https://github.com/AmitDas4321/CoreX.git
 ```
 
-### 4. Enter Directory
+---
+
+## 4. Open Project
 
 ```bash
 cd CoreX
 ```
 
-### 5. Run Installer
+---
+
+## 5. Run Installer
+
+Give permission:
 
 ```bash
 chmod +x install.sh
+```
+
+Start installation:
+
+```bash
 ./install.sh
 ```
 
-Restart Termux:
+During installation:
+
+* Enter your username
+* Confirm installation
+* CoreX will automatically backup your terminal configuration
+
+---
+
+## 6. Restart Terminal
 
 ```bash
 exec bash
@@ -101,37 +130,55 @@ exec bash
 
 # 🐧 Linux Installation
 
-Supported distributions:
+CoreX also supports Linux systems.
 
-- Ubuntu
-- Debian
-- Kali Linux
-- Arch Linux
-- WSL
+Supported:
 
-### Install Dependencies
+* Ubuntu
+* Debian
+* Kali Linux
+* Arch Linux
+* WSL
 
-Ubuntu/Debian:
+---
+
+## Install Required Packages
+
+### Ubuntu / Debian / Kali / WSL
 
 ```bash
 sudo apt update
-
-sudo apt install -y git bash python3 figlet ruby
 ```
 
-Install lolcat:
+```bash
+sudo apt install -y git bash python3 python3-pip \
+figlet ruby-full curl nano clang fish php perl \
+nmap w3m hydra cowsay tar dnsutils
+```
+
+Install Python packages:
+
+```bash
+pip3 install requests mechanize lolcat bs4 futures rich
+```
+
+Install Lolcat:
 
 ```bash
 sudo gem install lolcat
 ```
 
-### Clone CoreX
+---
+
+## Install CoreX
+
+Clone repository:
 
 ```bash
 git clone https://github.com/AmitDas4321/CoreX.git
 ```
 
-Open folder:
+Enter directory:
 
 ```bash
 cd CoreX
@@ -144,7 +191,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-Restart terminal:
+Restart shell:
 
 ```bash
 exec bash
@@ -154,18 +201,15 @@ exec bash
 
 # 🗑️ Uninstall
 
-Remove CoreX and restore your original terminal configuration:
+The same uninstall command works on all supported platforms.
 
 ```bash
+cd CoreX
 chmod +x uninstall.sh
 ./uninstall.sh
 ```
 
-CoreX automatically restores your previous:
-
-- Termux bash configuration
-- Linux bash configuration
-- Custom files
+CoreX automatically detects your platform and restores the original terminal configuration.
 
 ---
 
@@ -174,46 +218,38 @@ CoreX automatically restores your previous:
 ```
 CoreX/
 │
-├── install.sh          # Universal installer
-├── uninstall.sh        # Universal uninstaller
-├── bash.bashrc         # Terminal customization
-├── wlc.py              # Welcome animation
+├── install.sh
+├── uninstall.sh
+├── bash.bashrc
+├── wlc.py
 ├── LICENSE
 └── README.md
 ```
 
 ---
 
-# 🎯 Requirements
+# 🖥️ Platform Support
 
-## Termux
-
-- Latest Termux
-- Bash
-- Python
-- Figlet
-- Lolcat
-
-## Linux
-
-- Bash shell
-- Python3
-- Figlet
-- Lolcat
+| Platform           | Support        |
+| ------------------ | -------------- |
+| Termux Android     | ✅              |
+| Ubuntu             | ✅              |
+| Debian             | ✅              |
+| Kali Linux         | ✅              |
+| Arch Linux         | ✅              |
+| WSL Linux          | ✅              |
+| Windows PowerShell | 🚧 Coming Soon |
 
 ---
 
-# 🖥️ Supported Platforms
+# 🎯 Requirements
 
-| Platform | Support |
-|----------|---------|
-| Termux Android | ✅ |
-| Ubuntu | ✅ |
-| Debian | ✅ |
-| Kali Linux | ✅ |
-| Arch Linux | ✅ |
-| WSL | ✅ |
-| Windows PowerShell | ❌ (Coming Soon) |
+* Bash Shell
+* Python / Python3
+* Figlet
+* Lolcat
+* Git
+* Internet Connection
 
 ---
 
@@ -223,20 +259,21 @@ CoreX/
 
 GitHub:
 
-https://github.com/AmitDas4321
+[https://github.com/AmitDas4321](https://github.com/AmitDas4321)
 
 ---
 
 # ⭐ Support
 
-If you like CoreX:
+If you like this project:
 
-- Give the repository a ⭐
-- Share it with others
-- Contribute improvements
+* Give the repository a ⭐
+* Share CoreX with others
+* Report bugs
+* Suggest improvements
 
 ---
 
 # 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the MIT License.
