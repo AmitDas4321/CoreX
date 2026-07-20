@@ -82,6 +82,7 @@ exec bash
 CoreX/
 ├── bash.bashrc
 ├── wlc.py
+├── LICENSE
 └── README.md
 ```
 
