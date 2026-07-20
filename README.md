@@ -241,7 +241,7 @@ CoreX/
 
 <p align="center">
   <a href="https://github.com/AmitDas4321">
-    <img src="https://github.com/AmitDas4321.png" width="140" height="140" style="border-radius:50%;" alt="Amit Das"/>
+    <img src="https://github.com/AmitDas4321.png" width="140" height="140" style="border-radius:50%;" alt="Mk Hossain"/>
   </a>
 </p>
 
